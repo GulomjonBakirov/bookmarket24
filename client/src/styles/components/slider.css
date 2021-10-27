@@ -1,0 +1,256 @@
+.slider_title {
+  font-size: 5vw;
+  color: #452473;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 2vw;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 100%;
+  padding: 0 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.card-wrapper:active, .card-wrapper:hover, .card-wrapper:focus {
+  outline: none;
+  border: none;
+}
+
+.card {
+  width: 100%;
+  height: 450px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.card .card-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  background-color: #000;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card .card-image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.card:hover img {
+  opacity: 0.4;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.card:hover .card-image {
+  -webkit-transform: translateY(-100px);
+          transform: translateY(-100px);
+  -webkit-transition: all 0.9s;
+  transition: all 0.9s;
+}
+
+.social-icons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social-icons li {
+  list-style: none;
+}
+
+.social-icons li .link {
+  position: relative;
+  display: block;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  background: #fff;
+  font-size: 23px;
+  color: #452473;
+  font-weight: bold;
+  margin: 0 6px;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  -webkit-transform: translateY(200px);
+          transform: translateY(200px);
+  opacity: 0;
+  font-family: "Raleway", sans-serif;
+}
+
+.card:hover .social-icons li .link {
+  -webkit-transform: translateY(0px);
+          transform: translateY(0px);
+  opacity: 1;
+}
+
+.social-icons li .link:hover {
+  background: #000;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  color: #fff;
+}
+
+.social-icons li .link {
+  -webkit-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.social-icons li .link:hover {
+  -webkit-transform: rotateY(360deg);
+          transform: rotateY(360deg);
+  color: #fff;
+}
+
+.card:hover li:nth-child(1) .link {
+  -webkit-transition-delay: 0.1s;
+          transition-delay: 0.1s;
+}
+
+.card:hover li:nth-child(2) a {
+  -webkit-transition-delay: 0.2s;
+          transition-delay: 0.2s;
+}
+
+.card:hover li:nth-child(3) a {
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
+.card:hover li:nth-child(4) a {
+  -webkit-transition-delay: 0.4s;
+          transition-delay: 0.4s;
+}
+
+.details {
+  position: absolute;
+  bottom: 400px;
+  left: 0;
+  background: #fff;
+  width: 100%;
+  height: 120px;
+  z-index: 1;
+  padding: 10px;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  font-family: "Raleway", sans-serif;
+}
+
+.details h2 {
+  margin: 30px 0;
+  padding: 0;
+  text-align: center;
+}
+
+.details h2 .job-title {
+  font-size: 16px;
+  line-height: 2;
+  color: #333;
+  font-weight: 300;
+  display: block;
+}
+
+.card:hover .details {
+  bottom: 0;
+}
+
+.slick-dots {
+  bottom: -2.5vw;
+}
+
+@media (max-width: 900px) {
+  .slick-dots {
+    bottom: -5.5vw;
+  }
+}
+
+@media (max-width: 400px) {
+  .slick-dots {
+    display: none !important;
+  }
+}
+
+.slick-dots li button {
+  width: 20px;
+  height: 20px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+}
+
+.slick-dots li button:before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 10px;
+  height: 10px;
+  border-radius: 10px;
+  content: "";
+  text-align: center;
+  opacity: 0.5;
+  color: #000;
+  background-color: #fff;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.slick-dots li.slick-active button, .slick-dots li:hover button {
+  border-color: #452473;
+}
+
+.slick-dots li.slick-active button:before, .slick-dots li:hover button:before {
+  background-color: #452473;
+  opacity: 1;
+}
+
+.slick-arrow {
+  display: none !important;
+}
+
+.cardList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.cardList .card-wrapper {
+  width: 25%;
+}
+
+@media (max-width: 900px) and (min-width: 700px) {
+  .cardList .card-wrapper {
+    width: 33%;
+  }
+}
+
+@media (max-width: 700px) and (min-width: 500px) {
+  .cardList .card-wrapper {
+    width: 50%;
+  }
+}
+
+@media (max-width: 500px) {
+  .cardList .card-wrapper {
+    width: 100%;
+  }
+}
+/*# sourceMappingURL=slider.css.map */
