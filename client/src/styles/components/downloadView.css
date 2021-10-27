@@ -1,0 +1,73 @@
+.downloadView {
+  margin-top: 30px;
+  background-color: #f1f1f1;
+  padding: 15px;
+}
+.download {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.downloadImg {
+  margin-bottom: -100px;
+  margin-right: 20px;
+}
+.mobile {
+  margin-left: 20px;
+  display: flex;
+}
+.mobile a:first-child {
+  margin-right: 10px;
+}
+
+@media (max-width: 1000px) {
+  .mobile {
+    flex-direction: column;
+  }
+  .mobile a:first-child {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 800px) {
+  .mobile {
+    flex-direction: row;
+  }
+  .mobile a:first-child {
+    margin-right: 10px;
+  }
+  .downloadDescription {
+    display: none;
+  }
+}
+
+@media (max-width: 700px) {
+  .download {
+    justify-content: space-between;
+  }
+  .mobile {
+    flex-direction: column;
+  }
+  .mobile a:first-child {
+    margin-bottom: 10px;
+  }
+}
+
+@media (max-width: 500px) {
+  .downloadImg img {
+    width: 100%;
+  }
+}
+@media (max-width: 430px) {
+  .downloadImg {
+    width: 50%;
+    margin-bottom: 0;
+    margin-right: 0;
+  }
+  .downloadImg img {
+    width: 100%;
+  }
+  .mobile a img {
+    width: 110px;
+  }
+}
